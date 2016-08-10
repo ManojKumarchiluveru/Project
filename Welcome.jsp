@@ -72,7 +72,7 @@ div.desc {
     <div class="navbar-header">
       </div>
     <ul class="nav navbar-nav">
-      <li><a href="Welcome">Home</a></li>
+      <li><a href="Admin">Home</a></li>
       <li><a href="#">Gaming</a></li>
       <li><a href="#">Blu-ray & DVD</a></li>
       <li><a href="#">PC</a></li>
@@ -99,8 +99,6 @@ div.desc {
 
 
 <div class="container">
-
-  <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">

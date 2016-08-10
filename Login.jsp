@@ -14,7 +14,7 @@
 <style>
 body
 {
-  background-image:url(resources/images/pop.png);
+  background-image:url(resources/images/pop.jpg);
 
    background-repeat:no-repeat;
 
@@ -91,7 +91,7 @@ div {
 <td><h1> Login</h1></td>
 </tr>
 <div>
-  <form action="Welcome">
+  <form action="Admin">
   	<tr>
 	<td><label style="color:white" for="email">Email:</label></td>
     <td><input type="email" id="email" name="uemail" placeholder="Enter Email"></td>
