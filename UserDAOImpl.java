@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.game.model.User;
+import com.game.model.UserRole;
 
 
 @Repository("userDAO")
@@ -50,12 +51,19 @@ public class UserDAOImpl implements UserDAO{
 
 	@Transactional
 	public void saveOrUpdate(User user) {
-		Transaction t=sessionFactory.getCurrentSession().beginTransaction();
-
-		sessionFactory.getCurrentSession().saveOrUpdate(user);
-		t.commit();
-
+	Session session=sessionFactory.getCurrentSession();
+	Transaction tx=session.beginTransaction();
+	user.setIsenabled(true);
+	session.save(user);
+	UserRole userRole=new UserRole();
+	userRole.setId(user.getId());
+	userRole.setAuthority("ROLE_USER");
+	session.save(userRole);
+	System.out.println("Done saving user");
+	tx.commit();
 	}
+
+	
 
 	@Transactional
 	public void delete(int uid) {

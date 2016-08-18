@@ -1,5 +1,6 @@
 package com.game.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,23 +21,25 @@ private String ulastname;
 private boolean isAdmin;
 private String uemail;
 private String upassword;
+@Column(name="Enabled")
+private boolean isenabled;
 public int getId() {
 	return id;
 }
 public void setId(int id) {
 	this.id = id;
 }
-public String getFirstname() {
+public String getUfirstname() {
 	return ufirstname;
 }
-public void setFirstname(String firstname) {
-	this.ufirstname = firstname;
+public void setUfirstname(String ufirstname) {
+	this.ufirstname = ufirstname;
 }
-public String getLastname() {
+public String getUlastname() {
 	return ulastname;
 }
-public void setLastname(String lastname) {
-	this.ulastname = lastname;
+public void setUlastname(String ulastname) {
+	this.ulastname = ulastname;
 }
 public boolean isAdmin() {
 	return isAdmin;
@@ -44,19 +47,24 @@ public boolean isAdmin() {
 public void setAdmin(boolean isAdmin) {
 	this.isAdmin = isAdmin;
 }
-public String getEmail() {
+public String getUemail() {
 	return uemail;
 }
-public void setEmail(String email) {
-	uemail = email;
+public void setUemail(String uemail) {
+	this.uemail = uemail;
 }
-public String getPassword() {
+public String getUpassword() {
 	return upassword;
 }
-public void setPassword(String password) {
-	this.upassword = password;
+public void setUpassword(String upassword) {
+	this.upassword = upassword;
 }
-
+public boolean isIsenabled() {
+	return isenabled;
+}
+public void setIsenabled(boolean isenabled) {
+	this.isenabled = isenabled;
+}
 
 
 }

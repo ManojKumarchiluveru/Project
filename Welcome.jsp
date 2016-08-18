@@ -72,7 +72,7 @@ div.desc {
     <div class="navbar-header">
       </div>
     <ul class="nav navbar-nav">
-      <li><a href="Admin">Home</a></li>
+      <li><a href="Admin">Product</a></li>
       <li><a href="#">Gaming</a></li>
       <li><a href="#">Blu-ray & DVD</a></li>
       <li><a href="#">PC</a></li>
@@ -87,13 +87,9 @@ div.desc {
       </li>
           </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="Signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="UserRegistration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
-  
-  
-  
-  
 </nav>
   
 
