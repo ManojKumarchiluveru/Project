@@ -26,7 +26,7 @@
     <div class="navbar-header">
       </div>
     <ul class="nav navbar-nav">
-      <li><a href="Adminpage">Product</a></li>
+      <li><a href="angularjs">View Products</a></li>
       <li><a href="#">Gaming</a></li>
       <li><a href="#">Blu-ray & DVD</a></li>
       <li><a href="#">PC</a></li>
@@ -41,11 +41,49 @@
       </li>
           </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="UserRegistration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="Logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
 </nav>
 
 
 
+
+
+
+<div class="container">
+  <h2>Welcome Admin </h2>
+  
+<div class="container">
+  <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Manage Products <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="AddProduct">Add</a></li>
+        <li><a href="#">Remove</a></li>
+        <li><a href="#">Update</a></li>
+        <li><a href="#">View All</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Manage Categories <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="AddCategory">Add</a></li>
+        <li><a href="#">Remove</a></li>
+        <li><a href="#">Update</a></li>
+        <li><a href="#">View All</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Manage Suppliers <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu">
+      <li><a href="AddSupplier">Add</a></li>
+        <li><a href="#">Remove</a></li>
+        <li><a href="#">Update</a></li>
+        <li><a href="#">View All</a></li>
+      </ul>
+    </div>
+</body>
+</html>
 

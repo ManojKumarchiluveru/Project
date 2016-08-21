@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
 @Entity
 @Table
@@ -14,57 +15,61 @@ import org.springframework.stereotype.Component;
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	private int id;
-private String ufirstname;
-private String ulastname;
-private boolean isAdmin;
-private String uemail;
-private String upassword;
-@Column(name="Enabled")
-private boolean isenabled;
+private int id;
+	@NotEmpty(message="first name cannot be empty")
+	private String ufirstname;
+	@NotEmpty(message="last name cannot be empty")
+	private String ulastname;
+	@NotEmpty(message="user name cannot be empty")
+	private String uusername;
+	@NotEmpty(message="password cannot be empty")
+	private String upassword;
+	@NotEmpty(message="Emailcannot be empty")
+	private String uemail;
+	@Column(name="enabled")
+	private boolean isEnabled;
 public int getId() {
-	return id;
-}
-public void setId(int id) {
-	this.id = id;
-}
-public String getUfirstname() {
-	return ufirstname;
-}
-public void setUfirstname(String ufirstname) {
-	this.ufirstname = ufirstname;
-}
-public String getUlastname() {
-	return ulastname;
-}
-public void setUlastname(String ulastname) {
-	this.ulastname = ulastname;
-}
-public boolean isAdmin() {
-	return isAdmin;
-}
-public void setAdmin(boolean isAdmin) {
-	this.isAdmin = isAdmin;
-}
-public String getUemail() {
-	return uemail;
-}
-public void setUemail(String uemail) {
-	this.uemail = uemail;
-}
-public String getUpassword() {
-	return upassword;
-}
-public void setUpassword(String upassword) {
-	this.upassword = upassword;
-}
-public boolean isIsenabled() {
-	return isenabled;
-}
-public void setIsenabled(boolean isenabled) {
-	this.isenabled = isenabled;
-}
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUfirstname() {
+		return ufirstname;
+	}
+	public void setUfirstname(String ufirstname) {
+		this.ufirstname = ufirstname;
+	}
+	public String getUlastname() {
+		return ulastname;
+	}
+	public void setUlastname(String ulastname) {
+		this.ulastname = ulastname;
+	}
+	public String getUusername() {
+		return uusername;
+	}
+	public void setUusername(String uusername) {
+		this.uusername = uusername;
+	}
+	public String getUpassword() {
+		return upassword;
+	}
+	public void setUpassword(String upassword) {
+		this.upassword = upassword;
+	}
+	public String getUemail() {
+		return uemail;
+	}
+	public void setUemail(String uemail) {
+		this.uemail = uemail;
+	}
+	public boolean isEnabled() {
+		return isEnabled;
+	}
+	public void setEnabled(boolean isEnabled) {
+		this.isEnabled = isEnabled;
+	}
 
 
 }

@@ -53,7 +53,7 @@ public class UserDAOImpl implements UserDAO{
 	public void saveOrUpdate(User user) {
 	Session session=sessionFactory.getCurrentSession();
 	Transaction tx=session.beginTransaction();
-	user.setIsenabled(true);
+	user.setEnabled(true);
 	session.save(user);
 	UserRole userRole=new UserRole();
 	userRole.setId(user.getId());

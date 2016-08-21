@@ -11,30 +11,41 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table
 @Component
+
 public class Category {
+
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	private String name;
-	private String description;
-	public int getId() {
-		return id;
+	private int cid;
+	private int spid;
+	private String cname;
+	private String cdescription;
+	public int getCid() {
+		return cid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCid(int cid) {
+		this.cid = cid;
 	}
-	public String getName() {
-		return name;
+	public int getSpid() {
+		return spid;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setSpid(int spid) {
+		this.spid = spid;
 	}
-	public String getDescription() {
-		return description;
+	public String getCname() {
+		return cname;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+	public String getCdescription() {
+		return cdescription;
+	}
+	public void setCdescription(String cdescription) {
+		this.cdescription = cdescription;
 	}
 	
 	
+
 }

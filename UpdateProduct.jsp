@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sign Up!</title>
+  <title>Product!</title>
   
  <style>
  body{
@@ -22,42 +22,36 @@
 <body>
 <br><br><br><br><br><br><br><br><br>
 <center><h2><font color="magenta">Sign Up!</font></h2></center>
-
- 
       
-      <form:form action="userregistration" commandName="user" method="POST">
+       <form:form action="updateproduct" method="post" commandName="product" modelAttribute="product" enctype="multipart/form-data">
 <table>
 <tr>
-<td>FirstName : </td>
-<td><form:input path="ufirstname" /><form:errors path="ufirstname" style="color:red"></form:errors></td>
+<td>Product Name : </td>
+<td><form:input path="pname" /><form:label path="pname" style="color:red"></form:label></td>
 </tr>
 <tr>
-<td>LastName : </td>
-<td><form:input path="ulastname" /><form:errors path="ulastname" style="color:red"></form:errors></td>
-</tr>
-<tr>
-<tr>
-<td>UserName : </td>
-<td><form:input path="uusername" /><form:errors path="uusername" style="color:red"></form:errors></td>
+<td>Product Description : </td>
+<td><form:input path="pdescription" /><form:label path="pdescription" style="color:red"></form:label></td>
 </tr>
 <tr>
 
 <tr>
-<td>Password : </td>
-<td><form:password path="upassword"/><form:errors path="upassword" style="color:red"></form:errors></td></tr>
+<td>Product Price : </td>
+<td><form:input path="pprice"/><form:label path="pprice" style="color:red"></form:label></td></tr>
 <tr>
-<td>EmaiId :</td>
-<td><form:input path="uemail"/><form:errors path="uemail" style="color:red"></form:errors></td></tr>
+<td>Product Quantity :</td>
+<td><form:input path="pquantity"/><form:label path="pquantity" style="color:red"></form:label></td></tr>
+<tr>
+<td><form:label path="img">Image Upload:</form:label></td>
+ <td><form:input type="file" path="img"  /></td>
+                </tr>
 
 <tr colspan="2">
-<td><input type="submit" value="Register"></td>
-<td><input type="reset" value="Reset"></td>
+<td><input type="submit" value="Update Product"></td>
 </tr>
 </table>
 </form:form>
       
-      
 </body>
 </html>
-
       

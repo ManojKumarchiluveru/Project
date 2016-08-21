@@ -11,32 +11,39 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table
 @Component
+
 public class Supplier {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-private int id;
-private String name;
-private String description ;
-
-
-public int getId() {
-	return id;
-}
-public void setId(int id) {
-	this.id = id;
-}
-public String getName() {
-	return name;
-}
-public void setName(String name) {
-	this.name = name;
-}
-public String getDescription() {
-	return description;
-}
-public void setDescription(String description) {
-	this.description = description;
-}
-
-
+	private int spid;
+	private int cid;
+	private String sname;
+	private String saddress;
+	public int getSpid() {
+		return spid;
+	}
+	public void setSpid(int spid) {
+		this.spid = spid;
+	}
+	public int getCid() {
+		return cid;
+	}
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public String getSaddress() {
+		return saddress;
+	}
+	public void setSaddress(String saddress) {
+		this.saddress = saddress;
+	}
+	
+	
 }

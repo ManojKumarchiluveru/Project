@@ -115,7 +115,7 @@ height: 680px;
 				            <ul class="multi-column-dropdown">
 					            <li><b>Products</b></li>					      
 					            <li class="divider"></li>
-					            <li><a href="ProductEdit" target="_self">Add</a></li>
+					            <li><a href="AddProduct" target="_self">Add</a></li>
 					            <li><a href="product" target="_self">Remove</a></li>
 					            <li><a href="product" target="_self">Update</a></li>
 					            <!--  <li><a href="#">Search</a></li>-->
@@ -126,7 +126,7 @@ height: 680px;
 				            <ul class="multi-column-dropdown">
 					            <li><b>Category</b></li>
 					            <li class="divider"></li>
-					            <li><a href="categories" target="_self">Add</a></li>
+					            <li><a href="AddCategory" target="_self">Add</a></li>
 					            <li><a href="categories" target="_self">Remove</a></li>
 					            <li><a href="categories" target="_self">Update</a></li>
 					            <!-- <li><a href="#">Search</a></li>-->
@@ -148,7 +148,7 @@ height: 680px;
 				            <ul class="multi-column-dropdown">
 					            <li><b>Suppliers</b></li>
 					            <li class="divider"></li>
-					            <li><a href="suppliers" target="_self">Add</a></li>
+					            <li><a href="AddSupplier" target="_self">Add</a></li>
 					            <li><a href="suppliers" target="_self">Remove</a></li>
 					            <li><a href="suppliers" target="_self">Update</a></li>
 					            <!--  <li><a href="#">Search</a></li>-->
@@ -165,7 +165,7 @@ height: 680px;
 </div>
 <br><br><br><br><br><br><br><br><br><br><br>
 <b><center><font face="Comic Sans MS"><h1>Welcome, Admin!</h1></font></center></b>
-<center><a class="btn btn-success" href="Sign In" target="_parent" style="float: right;"><span class="glyphicon glyphicon-log-out">Logout</span></a></center>
+<center><a class="btn btn-success" href="Login" target="_parent" style="float: right;"><span class="glyphicon glyphicon-log-out">Logout</span></a></center>
 <ul><b>
   <li>To change your password, go to Change Password.</li>
   <li>To manage the categories, products and suppliers, go to Manage.</li>

@@ -72,7 +72,7 @@ div.desc {
     <div class="navbar-header">
       </div>
     <ul class="nav navbar-nav">
-      <li><a href="Admin">Product</a></li>
+      <li><a href="uangularjs">View Products</a></li>
       <li><a href="#">Gaming</a></li>
       <li><a href="#">Blu-ray & DVD</a></li>
       <li><a href="#">PC</a></li>
@@ -152,8 +152,6 @@ div.desc {
     
       </div>
 </div>
-<br>
-<hr>
 
 
 
@@ -200,12 +198,4 @@ div.desc {
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
-
-
-
-
-
-
-
-</body>
-</html>
+<%@include file="Footer.jsp" %>

@@ -26,10 +26,17 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.game.controller.MyController</value>
-                
-                  
-				
-				
+				<value>com.game.controller.ProductController</value>
+                <value>com.game.controller.CategoryController</value>
+                <value>com.game.controller.SupplierController</value>  
+				<value>com.game.dao.UserDAOImpl</value>
+				<value>com.game.dao.ProductDAOImpl</value>
+				<value>com.game.dao.CategoryDAOImpl</value>
+				<value>com.game.dao.SupplierDAOImpl</value>
+				<value>com.game.service.UserService</value>
+				<value>com.game.service.ProductService</value>
+				<value>com.game.service.CategoryService</value>
+				<value>com.game.service.SupplierService</value>
 			</list>
 		</property>
 
@@ -37,6 +44,9 @@
 			<list>
 				<value>com.game</value>
 				<value>com.game.controller</value>
+				<value>com.game.dao</value>
+				<value>com.game.model</value>
+				<value>com.game.service</value>
 				
 			</list>
 		</property>
