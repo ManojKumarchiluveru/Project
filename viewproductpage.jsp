@@ -68,7 +68,7 @@
   <div ng-app="myApp" ng-controller="dataCtrl">
 Enter Product Name:  <input type="text"  ng-model="search">&nbsp&nbsp<span class="glyphicon glyphicon-search"></span>
     <hr></hr>
-    <table class="table table-striped">
+    <table>
     <tr>
     <th>Product Id</th>
     <th>Product Name</th>
@@ -102,3 +102,75 @@ angular.module('myApp',[]).controller('dataCtrl',function($scope)
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@RequestMapping("/getUserDetails")
+	public ModelAndView displayUserDetails(@ModelAttribute("userDetails") UserDetails us, Principal p ){
+		System.out.println("getuserdetails()");
+		//System.out.print("\nMyController - displaySignUpPage()");
+		UserDetails ud = userService.getUserById(p.getName());
+		ModelAndView mv = new ModelAndView("userDetailsPage");		
+		//mv.addObject("uname", ud.getUserId());
+		mv.addObject("uname",ud.getUserId());
+		String imgpath = "\\abcd1\\resources\\users\\images\\" + ud.getUserId() + ".jpg"; 
+		System.out.println(ud.getImagefile());
+		mv.addObject("uimg", imgpath);
+		System.out.println(p.getName());
+		
+		//System.out.println(ud.getImagefile().toString());
+		
+		return mv;
+	}
+=========================================
+<br>
+Hi  ${uname}
+<br>
+<img src= "${uimg}" height="200" width="300">
+</body>
+</html>
+============================================
+@RequestMapping("/successUserPageSpring")
+	public ModelAndView displaySignUpPageSpring(@ModelAttribute("userDetails")UserDetails ud, Principal p){
+		//System.out.print("\nMyController - displaySignUpPage()");
+		ModelAndView mv = new ModelAndView("loginSuccessUser");		
+		mv.addObject("uname", ud.getUserId());
+		return mv;
+	}	
+================================================

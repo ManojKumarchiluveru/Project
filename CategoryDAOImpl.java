@@ -51,20 +51,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 		return null;
 	}
 	
-	/*@Transactional
-	public Category get(String id) {
-		String hql="from id=" + "'"+ id +"'";
-		Query query=sessionFactory.getCurrentSession().createQuery(hql);
-		List<Category> listcategory=(List<Category>) query.list();
-		
-		if(listcategory !=null && !listcategory.isEmpty()){
-			return listcategory.get(0);
-		}
-		
-		return null;
-	}*/
 	
-	
+
 	@Transactional
 	public List<Category> list() {
 		@SuppressWarnings({ "unchecked" })
@@ -76,5 +64,19 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 
+	@Transactional
+	public Category getByName(String cname) {
 
+	   String hql = "from Category where cname=" + "'"+ cname +"'";
+	
+		Query query = (Query) sessionFactory.openSession().createQuery(hql);
+		List<Category> listCategory = (List<Category>)  query.list();
+		
+		if  (listCategory != null && !listCategory.isEmpty()){
+			return listCategory.get(0);
+			
+		}
+   		return null;
+
+}
 }

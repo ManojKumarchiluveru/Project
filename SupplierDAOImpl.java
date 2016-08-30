@@ -68,5 +68,19 @@ public Supplier get(int id) {
 	}
 	
 	
-}
+	@Transactional
+	public Supplier getByName(String supname) {
 
+	   String hql = "from Supplier where supname=" + "'"+ supname +"'";
+	
+		Query query = (Query) sessionFactory.openSession().createQuery(hql);
+		List<Supplier> listSupplier = (List<Supplier>)  query.list();
+		
+		if  (listSupplier != null && !listSupplier.isEmpty()){
+			return listSupplier.get(0);
+			
+		}
+   		return null;
+	
+}
+}

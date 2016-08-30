@@ -19,6 +19,8 @@ public class SupplierService {
 	{
 		supplierDAO.saveOrUpdate(supplier);	
 	}
+	
+
 	public List<Supplier> list()
 	{
 		List<Supplier> list=supplierDAO.list();
@@ -31,6 +33,11 @@ public class SupplierService {
 	public void delete(int id)
 	{
 		supplierDAO.delete(id);
+	}
+
+	public Supplier getByName(String supname) {
+		
+		return supplierDAO.getByName(supname);
 	}
 	
 

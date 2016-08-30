@@ -1,5 +1,5 @@
 
-<center> <h1 style="color:white"> WELCOME TO GLASS HUT </h1></center><hr>
+<center> <h1 style="color:white"> Welcome To Professional Gaming </h1></center>
 <%@include file="Header.jsp"%>
 
 
@@ -15,19 +15,14 @@
 <style>
  body
   {
-  background-color:#1A5276;
+  background-color:#404040;
   }
 </style>
 <script type="text/javascript" src="https://gc.kis.scr.kaspersky-labs.com/F735D753-CB57-2144-9288-48F787DAC4FC/main.js" charset="UTF-8"></script></head>
 <body bgcolor="#1A5276">
-<HR>
 <CENTER>
 <CENTER>
 
-
-
-<br>
-<br>
 <br>
 <br>
 <form action="<c:url value="j_spring_security_check" />" method="post">
@@ -44,7 +39,6 @@
 </tr>
 <br>
 <br>
-<br>
 <tr>
 <td style="color:black">PASSWORD:</td>
 <td><input type="password" name="j_password"/></td>
@@ -57,8 +51,41 @@
 </form>
 </CENTER>
 
-</body>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>    
+<br>
+<br>
+<br>
+
+
+
+
+
+<nav class="navbar navbar-inverse">
+<ul class="w3-navbar w3-blue">
+
+</ul>
+  <div class="footer">
+            <div class="footer-center">
+                <div style="color: White; height: 25px">
+                    <p>
+                        <span style="float: left">Copyright © 2016 · All Rights Reserved </span>
+
+                        <span style="float: right">Design & Developed by &nbsp;<a href=""
+                            style="color: RED;">ProfessionalGaming </a> </span>
+                        <br />
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+</nav>
 </body>
 </html>
 

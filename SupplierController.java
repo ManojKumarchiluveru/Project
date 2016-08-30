@@ -28,18 +28,20 @@ public class SupplierController {
 	@RequestMapping("/addsupplier")
 	public ModelAndView suppplier(
 			@ModelAttribute Supplier supplier,
-			@RequestParam(value = "sname") String name,
-			@RequestParam(value = "saddress") String address
+			@RequestParam(value = "supname") String name,
+			@RequestParam(value = "supmobile") String mobile,
+			@RequestParam(value = "supaddress") String address
 			 ) {
 		
-		supplier.setSname(name);
-		supplier.setSaddress(address);
+		supplier.setSupname(name);
+		supplier.setSupmobile(mobile);
+		supplier.setSupaddress(address);
 
 
 
 		System.out.println("in supplier controller");
 		ss.saveOrUpdate(supplier);
-		ModelAndView mv = new ModelAndView("Admin");
+		ModelAndView mv = new ModelAndView("Adminpage");
 		return mv;
 	}
 

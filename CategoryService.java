@@ -33,6 +33,10 @@ public class CategoryService {
 	{
 		categoryDAO.delete(id);
 	}
+	public Category getByName(String cname) {
+
+		return categoryDAO.getByName(cname);
+	}
 	
 
 }

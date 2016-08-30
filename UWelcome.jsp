@@ -1,44 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
- 
-<body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="Welcome">ProfessionalGaming</a>
-    </div>
-  </div><br>
-
-  <div class="container-fluid">
-    <div class="navbar-header">
-      </div>
-    <ul class="nav navbar-nav">
-      <li><a href="viewproduct">Product</a></li>
-      
-        </ul>
-      </li>
-          </ul>
-    <ul class="nav navbar-nav navbar-right">
-    
-      <li><a href="UserRegistration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-</nav>
-
-
-
-
-
   <title>Gaming Universe</title>
-   <style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       height: 15%;
@@ -85,6 +56,33 @@ div.desc {
 
 
 <body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Welcome">Professional.Com</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>CART</a></li>
+    </ul>
+  
+    
+          </ul>
+  </div><br>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      </div>
+    <ul class="nav navbar-nav">
+      <li><a href="viewproduct">View Products</a></li>      
+        </ul>
+      </li>
+          </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="Logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+</nav>
+  
+
+
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -144,8 +142,10 @@ div.desc {
       </div>
 </div>
 
+
 <br>
 <br>
+
 
 
 <div style="margin-left: 6%"; class="img">
@@ -153,53 +153,44 @@ div.desc {
   <a target="_blank" href="img_fjords.jpg">
     <img src="resources/images/1.jpg"  alt="Trolltunga Norway" width="300" height="200">
   </a>
-  <div class="desc">Buy This Product</div>
+  <div class="desc">Buy This Game</div>
 </div>
 
 <div class="img">
   <a target="_blank" href="img_forest.jpg">
     <img src="resources/images/2.jpg" alt="Forest" width="600" height="400">
   </a>
-  <div class="desc">Buy This Product</div>
+  <div class="desc">Buy This Game</div>
 </div>
 
 <div class="img">
   <a target="_blank" href="img_lights.jpg">
     <img src="resources/images/3.jpg" alt="Northern Lights" width="600" height="400">
   </a>
-  <div class="desc">Buy This Product</div>
+  <div class="desc">Buy This Game</div>
 </div>
 
 <div class="img">
   <a target="_blank" href="img_mountains.jpg">
     <img src="resources/images/4.jpg" alt="Mountains" width="600" height="400">
   </a>
-  <div class="desc">Buy This Product</div>
+  <div class="desc">Buy This Game</div>
 </div>
 
 <div class="img">
   <a target="_blank" href="img_lights.jpg">
     <img src="resources/images/12.png" alt="Northern Lights" width="600" height="400">
   </a>
-  <div class="desc">Buy This Product</div>
+  <div class="desc">Buy This Game</div>
 </div>
 
 <div class="img">
   <a target="_blank" href="img_mountains.jpg">
     <img src="resources/images/10.jpg" alt="Mountains" width="600" height="400">
   </a>
-  <div class="desc">Buy This Product</div>
+  <div class="desc">Buy This Game</div>
 </div>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>    
 <br>
 <br>
 <br>
@@ -208,8 +199,16 @@ div.desc {
 <br>
 <br>
 <br>
-<br> 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 

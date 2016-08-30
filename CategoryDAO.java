@@ -14,5 +14,7 @@ public void saveOrUpdate(Category category);
 
 public void delete(int id);
 
+public Category getByName(String cname);
+
 
 }

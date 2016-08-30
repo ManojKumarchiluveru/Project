@@ -1,9 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+ 
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Welcome">ProfessionalGaming</a>
+    </div>
+</div><br>
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      </div>
+      </nav>
+
+
+
+
+
 <title>Product Page</title>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -104,5 +126,38 @@ Product Id
 
 </div>
 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<nav class="navbar navbar-inverse">
+<ul class="w3-navbar w3-blue">
+
+</ul>
+  <div class="footer">
+            <div class="footer-center">
+                <div style="color: White; height: 25px">
+                    <p>
+                        <span style="float: left">Copyright © 2016 · All Rights Reserved </span>
+
+                        <span style="float: right">Design & Developed by &nbsp;<a href=""
+                            style="color: RED;">ProfessionalGaming </a> </span>
+                        <br />
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+</nav>
 </body>
 </html>

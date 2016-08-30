@@ -1,9 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<%@ include file="AHeader.jsp" %>
 <title>Product Page</title>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -65,6 +60,7 @@ Product Id
     <span ng-show="sortType == 'pname' && sortReverse" class="fa fa-caret-up"></span>
   </a>
 </td>
+
 <td>
   <a href="#" ng-click="sortType = 'pdescription'; sortReverse = !sortReverse">
   Description
@@ -72,6 +68,7 @@ Product Id
     <span ng-show="sortType == 'pdescription' && sortReverse" class="fa fa-caret-up"></span>
   </a>
 </td>
+
 <td>
   <a href="#" ng-click="sortType = 'pprice'; sortReverse = !sortReverse">
   Price
@@ -79,6 +76,7 @@ Product Id
     <span ng-show="sortType == 'pprice' && sortReverse" class="fa fa-caret-up"></span>
   </a>
 </td>
+
 <td>
   <a href="#" ng-click="sortType = 'pprice'; sortReverse = !sortReverse">
   Quantity
@@ -98,13 +96,45 @@ Product Id
 <td>{{p1.pdescription}}</td>
 <td>{{p1.pprice}}</td>
 <td>{{p1.pquantity}}</td>
-        <td><a href="editproduct?pid={{p1.pid}}">Edit</a></td>
-        <td><a href="deleteproduct?pid={{p1.pid}}">Delete</a></td>
+<td><a href="editproduct?pid={{p1.pid}}">edit</a></td>
+<td><a href="deleteproduct?pid={{p1.pid}}">Delete</a></td>
+
 </tr>
 </tbody>
 </table>
 
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<nav class="navbar navbar-inverse">
+<ul class="w3-navbar w3-blue">
+
+</ul>
+  <div class="footer">
+            <div class="footer-center">
+                <div style="color: White; height: 25px">
+                    <p>
+                        <span style="float: left">Copyright © 2016 · All Rights Reserved </span>
+
+                        <span style="float: right">Design & Developed by &nbsp;<a href=""
+                            style="color: RED;">ProfessionalGaming </a> </span>
+                        <br />
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+</nav>
 </body>
 </html>

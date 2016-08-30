@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -16,34 +17,36 @@ public class Supplier {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int spid;
-	private int cid;
-	private String sname;
-	private String saddress;
-	public int getSpid() {
-		return spid;
-	}
-	public void setSpid(int spid) {
-		this.spid = spid;
-	}
-	public int getCid() {
-		return cid;
-	}
-	public void setCid(int cid) {
-		this.cid = cid;
-	}
-	public String getSname() {
-		return sname;
-	}
-	public void setSname(String sname) {
-		this.sname = sname;
-	}
-	public String getSaddress() {
-		return saddress;
-	}
-	public void setSaddress(String saddress) {
-		this.saddress = saddress;
-	}
+	private int supid;
+	private String supname;
+	private String supaddress;
+	private String supmobile;
 	
 	
+	public int getSupid() {
+		return supid;
+	}
+	public void setSupid(int supid) {
+		this.supid = supid;
+	}
+	
+	public String getSupname() {
+		return supname;
+	}
+	public void setSupname(String supname) {
+		this.supname = supname;
+	}
+	public String getSupaddress() {
+		return supaddress;
+	}
+	public void setSupaddress(String supaddress) {
+		this.supaddress = supaddress;
+	}
+	public String getSupmobile() {
+		return supmobile;
+	}
+	public void setSupmobile(String supmobile) {
+		this.supmobile = supmobile;
+	}
+		
 }

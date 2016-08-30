@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.Principal;
 import java.util.List;
 
 
@@ -14,6 +15,7 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,8 +24,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.game.model.Category;
 import com.game.model.Product;
+import com.game.model.Supplier;
+import com.game.service.CategoryService;
 import com.game.service.ProductService;
+import com.game.service.SupplierService;
 import com.google.gson.Gson;
 
 @Controller
@@ -38,17 +44,31 @@ public class ProductController {
 	
 	@Autowired
 	private ProductService productService; 
+	@Autowired
+	private CategoryService categoryService; 
+	@Autowired
+	private SupplierService supplierService; 
 	
 	@RequestMapping("/AddProduct")
-	public ModelAndView displaprdPage(@ModelAttribute("product")Product product){
+	public ModelAndView displaprdPage(@ModelAttribute("product")Product product,Model model){
+		
+		model.addAttribute("product", new Product());
+		model.addAttribute("category", new Category());
+		model.addAttribute("supplier", new Supplier());
+		model.addAttribute("productList", this.productService.list());
+		model.addAttribute("categoryList", this.categoryService.list());
+		model.addAttribute("supplierList", this.supplierService.list());
+		
 		System.out.print("\nMyController - displayHomePage as landpage()");
+		
+		
 		ModelAndView mv = new ModelAndView("AddProduct");		
 		return mv;
 	}
 	
 	
 	@RequestMapping(value="/addproduct", method=RequestMethod.POST)
-	public String CreateProduct(@ModelAttribute("product")Product pd,HttpServletRequest request)
+	public String CreateProduct(@ModelAttribute("product")Product pd,HttpServletRequest request, Principal principal)
 	{		
 	 	System.out.println("in product controller11");
 
@@ -84,13 +104,27 @@ public class ProductController {
     		System.out.println("Image not saved");
     	}
   }
+    Supplier supplier=supplierService.getByName(pd.getSupplier().getSupname());
+	supplierService.saveOrUpdate(supplier);
+	
+	 Category category=categoryService.getByName(pd.getCategory().getCname());
+		categoryService.saveOrUpdate(category);
+ 	
+	pd.setSupplier(supplier);
+	pd.setCategory(category);
+
+	pd.setSupplier_id(supplier.getSupid());
+	pd.setCategory_id(category.getCid());
+
    
+    
+    
     productService.saveOrUpdate(pd);
 
     return "angularjs";
 	}
 	
-	@RequestMapping("/viewproductpage")
+	/*@RequestMapping("/viewproductpage")
 	public ModelAndView viewItems() throws JsonGenerationException, JsonMappingException, IOException
 	{
 		List<Product> list = productService.list();
@@ -101,7 +135,7 @@ public class ProductController {
 		return new ModelAndView("viewproductpage","listofitem",listjson);
 		
 	
-	}
+	}*/
 	
 	
 	@RequestMapping("deleteproduct")
@@ -147,8 +181,11 @@ public class ProductController {
 	        return "redirect:/angularjs";
 	        }
 	@RequestMapping("edit")
-	public ModelAndView editProduct(@RequestParam int pid, @ModelAttribute Product product)
-	{
+	public ModelAndView editProduct(@RequestParam int pid, @ModelAttribute Product product){
+		
+		
+		
+		
 		
 		Product prodObject = productService.get(pid);
 		return new ModelAndView("product", "prodObject", prodObject);
@@ -165,8 +202,19 @@ public class ProductController {
 	Gson gson = new Gson();
 	result = gson.toJson(plist);
 	return result;
+	}	
+	
+	@RequestMapping("/product")
+	public ModelAndView view(@RequestParam("pid") int id){
+
+	System.out.println("I am in productViewDetails");
+	System.out.println("ID:" + id);
+
+	Product product = productService.get(id);
+	return new ModelAndView("product", "product", product);
 	}
 	
 	
-}
 	
+	
+}

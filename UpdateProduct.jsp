@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Product!</title>
   
+  
  <style>
  body{
  background-image:url('resources/images/bo8.png');

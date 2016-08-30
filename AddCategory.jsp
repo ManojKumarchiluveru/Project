@@ -1,10 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+<%@ include file="Header.jsp" %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>CategoryPage</title>
+
 </head>
 <body>
 
@@ -23,6 +20,43 @@
       </table>
       </center>
       </form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      
 
+
+<nav class="navbar navbar-inverse">
+<ul class="w3-navbar w3-blue">
+
+</ul>
+  <div class="footer">
+            <div class="footer-center">
+                <div style="color: White; height: 25px">
+                    <p>
+                        <span style="float: left">Copyright © 2016 · All Rights Reserved </span>
+
+                        <span style="float: right">Design & Developed by &nbsp;<a href=""
+                            style="color: RED;">ProfessionalGaming </a> </span>
+                        <br />
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+</nav>
 </body>
 </html>

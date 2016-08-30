@@ -29,9 +29,22 @@ public class MyController {
 	}
 	
 	@RequestMapping("/Welcome")
-	public ModelAndView uWelcome()
+	public ModelAndView Welcm()
 	{
 		ModelAndView mv=new ModelAndView("Welcome");
+		return mv;
+	}
+	@RequestMapping("/UWelcome")
+	public ModelAndView uWelcome()
+	{
+		ModelAndView mv=new ModelAndView("UWelcome");
+		return mv;
+	}
+	
+	@RequestMapping("/viewproduct")
+	public ModelAndView viewproduct()
+	{
+		ModelAndView mv=new ModelAndView("viewproduct");
 		return mv;
 	}
 	
@@ -89,29 +102,23 @@ public class MyController {
 	}
 		
 		
-		@RequestMapping("UserCheck")
+		@RequestMapping("/UChecking")
 		public ModelAndView usercheck(Principal principal){
 			System.out.println("it is of user check");
-			return new ModelAndView("Welcome");
+			return new ModelAndView("UWelcome");
 			
 		}
 		
-		@RequestMapping("/AdminCheck")
+		@RequestMapping("/AChecking")
 		public ModelAndView admincheck(Principal principal){
 			System.out.println("it is of admincheck");
 			return new ModelAndView("Adminpage");
 		}
-		/*@RequestMapping("/logout")
-		public ModelAndView logout(Principal principal,HttpSession session){
-			session.invalidate();
-			return new ModelAndView("logout");
-		}
-		*/
 		@RequestMapping("/logout")
 		public String logout(HttpServletRequest request){
 			request.getSession().invalidate();
 			System.out.println("logout page called");
-			return "Logout";
+			return "Login";
 		}
 		
 }

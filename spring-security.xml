@@ -5,10 +5,10 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
   <http>
-	 <intercept-url pattern="/AdminCheck*" access="ROLE_ADMIN"/>
-	<form-login  login-page="/Login"  default-target-url="/AdminCheck"/>
-	<intercept-url pattern="/UserCheck**" access="ROLE_USER"/>
-	<form-login login-page="/Login"  default-target-url="/UserCheck"/>
+	 <intercept-url pattern="/AChecking*" access="ROLE_ADMIN"/>
+	<form-login  login-page="/Login"  default-target-url="/AChecking"/>
+	<intercept-url pattern="/UChecking**" access="ROLE_USER"/>
+	<form-login login-page="/Login"  default-target-url="/UChecking"/>
 	<logout logout-success-url="/logout"/>
 	</http>
 	

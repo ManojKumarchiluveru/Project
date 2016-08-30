@@ -26,18 +26,19 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.game.controller.MyController</value>
+				<value>com.game.controller.SupplierController</value>
+				<value>com.game.controller.CategoryController</value>
 				<value>com.game.controller.ProductController</value>
-                <value>com.game.controller.CategoryController</value>
-                <value>com.game.controller.SupplierController</value>  
 				<value>com.game.dao.UserDAOImpl</value>
-				<value>com.game.dao.ProductDAOImpl</value>
 				<value>com.game.dao.CategoryDAOImpl</value>
+				<value>com.game.dao.ProductDAOImpl</value>
 				<value>com.game.dao.SupplierDAOImpl</value>
 				<value>com.game.service.UserService</value>
-				<value>com.game.service.ProductService</value>
-				<value>com.game.service.CategoryService</value>
 				<value>com.game.service.SupplierService</value>
-			</list>
+				<value>com.game.service.CategoryService</value>
+				<value>com.game.service.ProductService</value>
+				
+				</list>
 		</property>
 
 		<property name="packagesToScan">
@@ -54,7 +55,7 @@
 	</bean>
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="org.h2.Driver" />
-		<property name="url" value="jdbc:h2:tcp://localhost/~/GAME" />
+		<property name="url" value="jdbc:h2:tcp://localhost/~/CMK" />
 		<property name="username" value="sa" />
 		<property name="password" value="" />
 	</bean>
